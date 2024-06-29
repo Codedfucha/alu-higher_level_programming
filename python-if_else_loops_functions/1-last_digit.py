@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 import random
+
 number = random.randint(-10000, 10000)
 
-last_digit = abs(number) % 10  # Get the last digit of the absolute value of number
+# Get the last digit of the absolute value of number
+last_digit = abs(number) % 10
 
+# Adjust last digit for negative numbers
 if number < 0:
-    last_digit = -last_digit  # Adjust last digit for negative numbers
-
-# Separate the print statements to avoid long lines
+    last_digit = -last_digit
 
 print(f"Last digit of {number} is {last_digit}", end=' ')
 
