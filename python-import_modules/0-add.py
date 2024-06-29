@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import os
+from add_0 import add
 
 def check_readme():
     if os.path.exists("README.md"):
@@ -11,8 +12,6 @@ def check_readme():
         return "README.md does not exist"
 
 if __name__ == "__main__":
-    from add_0 import add
-
     # Check if README.md exists and is not empty
     readme_status = check_readme()
 
@@ -23,3 +22,4 @@ if __name__ == "__main__":
 
     # Combined print statement
     print("{}\n{}".format(readme_status, addition_result))
+
