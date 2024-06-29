@@ -7,6 +7,8 @@ last_digit = abs(number) % 10  # Get the last digit of the absolute value of num
 if number < 0:
     last_digit = -last_digit  # Adjust last digit for negative numbers
 
+# Separate the print statements to avoid long lines
+
 print(f"Last digit of {number} is {last_digit}", end=' ')
 
 if last_digit > 5:
