@@ -14,18 +14,19 @@ def list_division(my_list_1, my_list_2, list_length):
             # Attempt division
             try:
                 division_result = num1 / num2
+                if isinstance(division_result, (int, float)):
+                    result.append(division_result)
+                else:
+                    raise TypeError("wrong type")
             except ZeroDivisionError:
                 print("division by 0")
-                division_result = 0
+                result.append(0)
             except TypeError:
                 print("wrong type")
-                division_result = 0
+                result.append(0)
 
         except IndexError as e:
             print(e)
-            division_result = 0
-
-        finally:
             result.append(0)
 
     return result
