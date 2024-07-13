@@ -29,4 +29,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print(e)
             result.append(0)
 
+        finally:
+            pass
+
     return result
