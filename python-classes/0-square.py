@@ -5,6 +5,7 @@ Module to define the Square class.
 
 This module defines a simple Square class with no attributes or methods.
 """
+
 class Square:
     """
     Defines a square.
