@@ -129,3 +129,11 @@ class Rectangle:
         Print a message when the rectangle instance is deleted.
         """
         print("Bye rectangle...")
+
+if __name__ == "__main__":
+    my_rectangle = Rectangle(2, 4)
+    print(str(my_rectangle))
+    print("--")
+    print(repr(my_rectangle))
+
+    del my_rectangle
