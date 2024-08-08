@@ -8,7 +8,8 @@ Usage:
 
 Arguments:
     <username> : GitHub username.
-    <personal_access_token> : GitHub personal access token (for Basic Authentication).
+    <personal_access_token> : GitHub personal access token
+    (for Basic Authentication).
 
 Dependencies:
     - requests: For sending HTTP requests.
@@ -23,6 +24,7 @@ import sys
 import requests
 from requests.auth import HTTPBasicAuth
 
+
 def main():
     """Main function to fetch and display GitHub user ID."""
     if len(sys.argv) != 3:
@@ -31,15 +33,19 @@ def main():
 
     username = sys.argv[1]
     token = sys.argv[2]
-    
+
     url = "https://api.github.com/user"
-    response = requests.get(url, auth=HTTPBasicAuth(username, token))
+    response = requests.get(
+        url, 
+        auth=HTTPBasicAuth(username, token)
+    )
 
     if response.status_code == 200:
         user_data = response.json()
         print(user_data.get('id'))
     else:
         print(None)
+
 
 if __name__ == "__main__":
     main()
